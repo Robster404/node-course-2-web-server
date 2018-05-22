@@ -70,6 +70,13 @@ app.get('/projects', (req, res) => {
 	});
 });
 
+app.get('/testpage', (req, res) => {
+	res.render('testpage.hbs', {
+		pageTitle: 'Test Page',
+		testPageMsg: 'test page message here',
+	});
+});
+
 app.get('/bad', (req, res) => {
 	res.send({
 		errorMessage: 'Unable to handle request',
